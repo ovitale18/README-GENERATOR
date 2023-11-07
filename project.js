@@ -159,15 +159,15 @@ const game = () => {
     const rows = transpose(reels);
     printRows(rows);
     const winnings = getWinnings(rows, bet, numberOfLines);
-    balance += winnings; 
+    balance += winnings;
     console.log("You won $" + winnings.toString());
 
     if (balance <= 0) {
-        console.log("You ran out of money!");
-        break;
+      console.log("You ran out of money!");
+      break;
     }
 
-    const playAgain = prompt("Do you want to play again? (y/n) ")
+    const playAgain = prompt("Do you want to play again? (y/n) ");
 
     if (playAgain != "y") break;
   }
